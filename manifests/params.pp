@@ -38,7 +38,7 @@ class gitolite::params {
   $gt_hooks_module = 'gitolite_hooks'
 
   case $::operatingsystem {
-    fedora,redhat,oel,centos: {
+    fedora,redhat,oel,centos,scientific: {
       $gt_client_package = ['perl-Error', 'perl-Git', 'git']
       $gt_server_package = [ 'gitweb', 'gitolite' ]
       $gt_httpd_conf_dir = '/etc/httpd/conf.d'
